@@ -43,15 +43,25 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#services">Innovation</a></li>
-                <li><a href="#msp">Managed Ops</a></li>
-                <li><a href="#partners">Partners</a></li>
-                <li><a href="#insights">Insights</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#services" data-i18n="nav.innovation">Innovation</a></li>
+                <li><a href="#msp" data-i18n="nav.managed_ops">Managed Ops</a></li>
+                <li><a href="#partners" data-i18n="nav.partners">Partners</a></li>
+                <li><a href="#insights" data-i18n="nav.insights">Insights</a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
             </ul>
 
+            <div class="language-selector">
+                <select id="language-switcher">
+                    <option value="en">🇺🇸 EN</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="vi">🇻🇳 Tiếng Việt</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="th">🇹🇭 ไทย</option>
+                </select>
+            </div>
+
             <a href="contact.html" class="btn btn-primary">
-                Get Started <i class="ph-bold ph-arrow-right"></i>
+                <span data-i18n="nav.get_started">Get Started</span> <i class="ph-bold ph-arrow-right"></i>
             </a>
         </div>
     </nav>
@@ -60,12 +70,14 @@
     <header class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Your Strategic Technology Partner. <br> <span>From Startups to Enterprise.</span></h1>
-                <p>We bridge the gap between business goals and technical execution. Whether you are a B2C startup, an
+                <h1 data-i18n="hero.title_line1">Your Strategic Technology Partner. <br> <span
+                        data-i18n="hero.title_line2">From Startups to Enterprise.</span></h1>
+                <p data-i18n="hero.subtitle">We bridge the gap between business goals and technical execution. Whether
+                    you are a B2C startup, an
                     SME needing a virtual IT department, or an enterprise building Fintech solutions, JMAD delivers.</p>
                 <div style="display: flex; gap: 1rem;">
-                    <a href="#services" class="btn btn-primary">Our Solutions</a>
-                    <a href="contact.html" class="btn btn-outline">Talk to an Expert</a>
+                    <a href="#services" class="btn btn-primary" data-i18n="hero.btn_solutions">Our Solutions</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="hero.btn_talk">Talk to an Expert</a>
                 </div>
             </div>
         </div>
@@ -76,9 +88,10 @@
         <div class="container">
             <div style="margin-bottom: 3rem; text-align: left;">
                 <span
-                    style="color: var(--accent-highlight); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Innovation</span>
-                <h2 style="margin-top: 0.5rem;">Digital Growth & Engineering.</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin-top: 1rem;">
+                    style="color: var(--accent-highlight); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;"
+                    data-i18n="services.label">Innovation</span>
+                <h2 style="margin-top: 0.5rem;" data-i18n="services.title">Digital Growth & Engineering.</h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin-top: 1rem;" data-i18n="services.desc">
                     We don't just build software; we build businesses. From high-conversion marketing to
                     enterprise-grade
                     applications.
@@ -89,32 +102,36 @@
                 <!-- Service 1: Marketing -->
                 <div class="card">
                     <div class="card-icon"><i class="ph-duotone ph-rocket-launch"></i></div>
-                    <h3>Digital Marketing</h3>
-                    <p>Data-driven growth strategies. SEO, SEM, and performance marketing designed to scale your user
+                    <h3 data-i18n="services.marketing_title">Digital Marketing</h3>
+                    <p data-i18n="services.marketing_desc">Data-driven growth strategies. SEO, SEM, and performance
+                        marketing designed to scale your user
                         base and maximize ROI.</p>
                 </div>
 
                 <!-- Service 2: Web Dev -->
                 <div class="card">
                     <div class="card-icon"><i class="ph-duotone ph-code"></i></div>
-                    <h3>Web Development</h3>
-                    <p>Modern, responsive, and blazing fast web applications built with Next.js and React. Enterprise
+                    <h3 data-i18n="services.web_title">Web Development</h3>
+                    <p data-i18n="services.web_desc">Modern, responsive, and blazing fast web applications built with
+                        Next.js and React. Enterprise
                         performance for every scale.</p>
                 </div>
 
                 <!-- Service 3: App Dev -->
                 <div class="card">
                     <div class="card-icon"><i class="ph-duotone ph-device-mobile"></i></div>
-                    <h3>Mobile App Dev</h3>
-                    <p>Native and cross-platform mobile experiences for iOS and Android. Beautiful, intuitive, and
+                    <h3 data-i18n="services.app_title">Mobile App Dev</h3>
+                    <p data-i18n="services.app_desc">Native and cross-platform mobile experiences for iOS and Android.
+                        Beautiful, intuitive, and
                         built for engagement.</p>
                 </div>
 
                 <!-- Service 4: UI/UX -->
                 <div class="card">
                     <div class="card-icon"><i class="ph-duotone ph-paint-brush-broad"></i></div>
-                    <h3>UI/UX Design</h3>
-                    <p>World-class design systems and interfaces. We craft user journeys that are as beautiful as they
+                    <h3 data-i18n="services.ui_title">UI/UX Design</h3>
+                    <p data-i18n="services.ui_desc">World-class design systems and interfaces. We craft user journeys
+                        that are as beautiful as they
                         are functional.</p>
                 </div>
             </div>
@@ -124,74 +141,66 @@
     <!-- Partners Section -->
     <!-- Partners Section -->
     <section id="partners" class="section"
-        style="background: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+        style="background: var(--bg-primary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
         <div class="container">
             <div style="text-align: center; margin-bottom: 3rem;">
                 <span
-                    style="color: var(--accent-info); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Global
-                    Infrastructure</span>
-                <h2 style="margin-top: 0.5rem;">Strategic Cloud Partners</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;">
-                    We leverage the world's best cloud platforms to build resilient, scalable, and secure solutions for
-                    your business.
+                    style="color: var(--accent-info); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;"
+                    data-i18n="partners.label">Infrastructure</span>
+                <h2 style="margin-top: 0.5rem;" data-i18n="partners.title">Strategic Cloud Partners</h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;"
+                    data-i18n="partners.desc">
+                    We leverage the world's best cloud platforms.
                 </p>
             </div>
 
-            <div class="partners-grid">
+            <div class="tech-grid">
                 <!-- AWS -->
-                <div class="partner-card">
-                    <div class="partner-name" style="color: #FF9900;">Amazon Web Services</div>
-                    <p class="partner-desc">Industry-leading cloud platform offering scalable compute, storage, and
-                        serverless solutions.</p>
+                <div class="tech-item" style="--dot-color: #FF9900;">
+                    <div class="tech-dot" style="background-color: #FF9900;"></div>
+                    <div class="tech-name">AWS</div>
                 </div>
 
                 <!-- Azure -->
-                <div class="partner-card">
-                    <div class="partner-name" style="color: #0078D4;">Microsoft Azure</div>
-                    <p class="partner-desc">Enterprise-grade cloud services deeply integrated with Microsoft's ecosystem
-                        and AI tools.</p>
+                <div class="tech-item" style="--dot-color: #0078D4;">
+                    <div class="tech-dot" style="background-color: #0078D4;"></div>
+                    <div class="tech-name">Microsoft Azure</div>
                 </div>
 
                 <!-- Google Cloud -->
-                <div class="partner-card">
-                    <div class="partner-name" style="color: #4285F4;">Google Cloud</div>
-                    <p class="partner-desc">Data-driven cloud solutions specializing in AI, machine learning, and
-                        containerization.</p>
+                <div class="tech-item" style="--dot-color: #4285F4;">
+                    <div class="tech-dot" style="background-color: #4285F4;"></div>
+                    <div class="tech-name">Google Cloud</div>
                 </div>
 
                 <!-- Tencent Cloud -->
-                <div class="partner-card">
-                    <div class="partner-name" style="color: #00A4FF;">Tencent Cloud</div>
-                    <p class="partner-desc">High-performance global infrastructure with strong connectivity to the
-                        Asia-Pacific market.</p>
+                <div class="tech-item" style="--dot-color: #00A4FF;">
+                    <div class="tech-dot" style="background-color: #00A4FF;"></div>
+                    <div class="tech-name">Tencent Cloud</div>
                 </div>
 
                 <!-- Huawei Cloud -->
-                <div class="partner-card">
-                    <div class="partner-name" style="color: #C9171E;">Huawei Cloud</div>
-                    <p class="partner-desc">Reliable full-stack cloud services focusing on enterprise intelligence and
-                        5G integration.</p>
+                <div class="tech-item" style="--dot-color: #C9171E;">
+                    <div class="tech-dot" style="background-color: #C9171E;"></div>
+                    <div class="tech-name">Huawei Cloud</div>
                 </div>
 
                 <!-- Alibaba Cloud -->
-                <div class="partner-card">
-                    <div class="partner-name" style="color: #FF6A00;">Alibaba Cloud</div>
-                    <p class="partner-desc">Asia's largest cloud provider, powering global e-commerce and digital
-                        finance ecosystems.</p>
+                <div class="tech-item" style="--dot-color: #FF6A00;">
+                    <div class="tech-dot" style="background-color: #FF6A00;"></div>
+                    <div class="tech-name">Alibaba Cloud</div>
                 </div>
 
                 <!-- BytePlus -->
-                <div class="partner-card">
-                    <div class="partner-name" style="color: #325AB4;">BytePlus</div>
-                    <p class="partner-desc">Intelligent technology solutions from ByteDance, optimizing engagement and
-                        video delivery.</p>
+                <div class="tech-item" style="--dot-color: #325AB4;">
+                    <div class="tech-dot" style="background-color: #325AB4;"></div>
+                    <div class="tech-name">BytePlus</div>
                 </div>
 
                 <!-- Cloudflare -->
-                <div class="partner-card">
-                    <div class="partner-name" style="color: #F38020;">Cloudflare</div>
-                    <p class="partner-desc">Global network ensuring security, performance, and reliability for modern
-                        web applications.</p>
+                <div class="tech-item" style="--dot-color: #F38020;">
+                    <div class="tech-dot" style="background-color: #F38020;"></div>
+                    <div class="tech-name">Cloudflare</div>
                 </div>
             </div>
         </div>
@@ -202,29 +211,36 @@
         <div class="container">
             <div class="about-grid">
                 <div>
-                    <h2>Built for the Future of IT.</h2>
-                    <p style="color: var(--text-secondary); margin: 1.5rem 0; font-size: 1.1rem;">
+                    <h2 data-i18n="about.title">Built for the Future of IT.</h2>
+                    <p style="color: var(--text-secondary); margin: 1.5rem 0; font-size: 1.1rem;"
+                        data-i18n="about.desc1">
                         JMAD was founded to bridge the gap between complex enterprise technology and
                         accessible business
                         solutions. We aren't just support tickets; we are your strategic technology
                         partner.
                     </p>
-                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;"
+                        data-i18n="about.desc2">
                         Our mission is to empower businesses with resilient infrastructure, proactive
                         security, and
                         digital experiences that drive growth.
                     </p>
-                    <a href="contact.html" class="btn btn-outline">Learn More About Us</a>
+                    <a href="contact.html" class="btn btn-outline" data-i18n="about.btn_learn">Learn More About Us</a>
                 </div>
                 <div>
                     <ul class="check-list">
-                        <li><i class="ph-bold ph-check-circle"></i> Certified Cloud Architects
-                            (AWS/Azure)</li>
-                        <li><i class="ph-bold ph-check-circle"></i> 24/7 Proactive Monitoring Center
+                        <li><i class="ph-bold ph-check-circle"></i> <span data-i18n="about.list_certified">Certified
+                                Cloud Architects
+                                (AWS/Azure)</span></li>
+                        <li><i class="ph-bold ph-check-circle"></i> <span data-i18n="about.list_monitoring">24/7
+                                Proactive Monitoring Center</span>
                         </li>
-                        <li><i class="ph-bold ph-check-circle"></i> Enterprise-Grade Cyber Security</li>
-                        <li><i class="ph-bold ph-check-circle"></i> 99.9% Uptime SLA Guarantee</li>
-                        <li><i class="ph-bold ph-check-circle"></i> Global Strategic Partnerships</li>
+                        <li><i class="ph-bold ph-check-circle"></i> <span
+                                data-i18n="about.list_security">Enterprise-Grade Cyber Security</span></li>
+                        <li><i class="ph-bold ph-check-circle"></i> <span data-i18n="about.list_uptime">99.9% Uptime SLA
+                                Guarantee</span></li>
+                        <li><i class="ph-bold ph-check-circle"></i> <span data-i18n="about.list_global">Global Strategic
+                                Partnerships</span></li>
                     </ul>
                 </div>
             </div>
@@ -236,10 +252,11 @@
         <div class="container">
             <div style="margin-bottom: 3rem; text-align: left;">
                 <span
-                    style="color: var(--accent-brand); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Managed
+                    style="color: var(--accent-brand); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;"
+                    data-i18n="msp.label">Managed
                     Operations</span>
-                <h2 style="margin-top: 0.5rem;">Your Virtual IT Department.</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin-top: 1rem;">
+                <h2 style="margin-top: 0.5rem;" data-i18n="msp.title">Your Virtual IT Department.</h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin-top: 1rem;" data-i18n="msp.desc">
                     For businesses without internal IT teams. We handle everything from desktops to
                     security, acting as
                     your dedicated technology partner.
@@ -252,8 +269,9 @@
                     <div class="msp-feature">
                         <div class="msp-icon"><i class="ph-duotone ph-desktop"></i></div>
                         <div class="msp-content">
-                            <h4>IT Helpdesk & Support</h4>
-                            <p>Unlimited remote and on-site support for your team. Quick resolution
+                            <h4 data-i18n="msp.helpdesk_title">IT Helpdesk & Support</h4>
+                            <p data-i18n="msp.helpdesk_desc">Unlimited remote and on-site support for your team. Quick
+                                resolution
                                 times and friendly
                                 experts ready to help.</p>
                         </div>
@@ -265,8 +283,9 @@
                     <div class="msp-feature">
                         <div class="msp-icon"><i class="ph-duotone ph-shield-check"></i></div>
                         <div class="msp-content">
-                            <h4>Managed Security (MSSP)</h4>
-                            <p>Next-gen antivirus, ransomware protection, firewall management, and 24/7
+                            <h4 data-i18n="msp.security_title">Managed Security (MSSP)</h4>
+                            <p data-i18n="msp.security_desc">Next-gen antivirus, ransomware protection, firewall
+                                management, and 24/7
                                 threat hunting
                                 to keep data safe.</p>
                         </div>
@@ -278,8 +297,9 @@
                     <div class="msp-feature">
                         <div class="msp-icon"><i class="ph-duotone ph-hard-drives"></i></div>
                         <div class="msp-content">
-                            <h4>Backup & Disaster Recovery</h4>
-                            <p>Automated daily backups and rapid recovery plans ensuring your business
+                            <h4 data-i18n="msp.backup_title">Backup & Disaster Recovery</h4>
+                            <p data-i18n="msp.backup_desc">Automated daily backups and rapid recovery plans ensuring
+                                your business
                                 data is never
                                 lost
                                 and always accessible.</p>
@@ -292,8 +312,9 @@
                     <div class="msp-feature">
                         <div class="msp-icon"><i class="ph-duotone ph-chart-line-up"></i></div>
                         <div class="msp-content">
-                            <h4>Proactive Monitoring</h4>
-                            <p>We fix issues before they disrupt you. Real-time server, network, and
+                            <h4 data-i18n="msp.monitoring_title">Proactive Monitoring</h4>
+                            <p data-i18n="msp.monitoring_desc">We fix issues before they disrupt you. Real-time server,
+                                network, and
                                 endpoint monitoring
                                 around the clock.</p>
                         </div>
@@ -302,7 +323,7 @@
             </div>
 
             <div style="margin-top: 3rem; text-align: center;">
-                <a href="contact.html" class="btn btn-primary">Get a Managed Quote</a>
+                <a href="contact.html" class="btn btn-primary" data-i18n="msp.btn_quote">Get a Managed Quote</a>
             </div>
         </div>
     </section>
@@ -313,9 +334,11 @@
         <div class="container">
             <div style="text-align: center; margin-bottom: 3rem;">
                 <span
-                    style="color: var(--accent-orange); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Portfolio</span>
-                <h2 style="margin-top: 0.5rem;">Engineering Insights & Case Studies</h2>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;">
+                    style="color: var(--accent-orange); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;"
+                    data-i18n="insights.label">Portfolio</span>
+                <h2 style="margin-top: 0.5rem;" data-i18n="insights.title">Engineering Insights & Case Studies</h2>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 1rem auto 0;"
+                    data-i18n="insights.desc">
                     Real-world examples of how we solve complex challenges and drive digital transformation.
                 </p>
             </div>
@@ -324,17 +347,19 @@
                 <!-- Case Study 1: Blockchain -->
                 <article class="insight-card" style="background: var(--bg-primary);">
                     <div class="insight-content">
-                        <div class="insight-tag">Blockchain</div>
-                        <h3 class="insight-title" style="font-size: 1.25rem;">Blockchain in Supply Chain
+                        <div class="insight-tag" data-i18n="insights.case1_tag">Blockchain</div>
+                        <h3 class="insight-title" style="font-size: 1.25rem;" data-i18n="insights.case1_title">
+                            Blockchain in Supply Chain
                         </h3>
-                        <p class="insight-excerpt">
+                        <p class="insight-excerpt" data-i18n="insights.case1_desc">
                             Implemented a private blockchain network to ensure end-to-end transparency and
                             immutable
                             traceability for global logistics, reducing disputes by 90%.
                         </p>
                         <div class="insight-footer">
                             <span style="color: var(--accent-brand); font-weight: 600;"><i
-                                    class="ph-duotone ph-link"></i> Traceability</span>
+                                    class="ph-duotone ph-link"></i> <span
+                                    data-i18n="insights.case1_footer">Traceability</span></span>
                         </div>
                     </div>
                 </article>
@@ -342,16 +367,18 @@
                 <!-- Case Study 2: Fintech -->
                 <article class="insight-card" style="background: var(--bg-primary);">
                     <div class="insight-content">
-                        <div class="insight-tag">Fintech</div>
-                        <h3 class="insight-title" style="font-size: 1.25rem;">E-Wallet Ecosystem</h3>
-                        <p class="insight-excerpt">
+                        <div class="insight-tag" data-i18n="insights.case2_tag">Fintech</div>
+                        <h3 class="insight-title" style="font-size: 1.25rem;" data-i18n="insights.case2_title">E-Wallet
+                            Ecosystem</h3>
+                        <p class="insight-excerpt" data-i18n="insights.case2_desc">
                             Developed a super-app ecosystem integrating social media with a secure e-wallet
                             payment
                             gateway, handling high-volume peer-to-peer transactions.
                         </p>
                         <div class="insight-footer">
                             <span style="color: var(--accent-brand); font-weight: 600;"><i
-                                    class="ph-duotone ph-wallet"></i> Payments</span>
+                                    class="ph-duotone ph-wallet"></i> <span
+                                    data-i18n="insights.case2_footer">Payments</span></span>
                         </div>
                     </div>
                 </article>
@@ -359,17 +386,19 @@
                 <!-- Case Study 3: iGaming -->
                 <article class="insight-card" style="background: var(--bg-primary);">
                     <div class="insight-content">
-                        <div class="insight-tag">High Scale</div>
-                        <h3 class="insight-title" style="font-size: 1.25rem;">iGaming Scale & Resiliency
+                        <div class="insight-tag" data-i18n="insights.case3_tag">High Scale</div>
+                        <h3 class="insight-title" style="font-size: 1.25rem;" data-i18n="insights.case3_title">iGaming
+                            Scale & Resiliency
                         </h3>
-                        <p class="insight-excerpt">
+                        <p class="insight-excerpt" data-i18n="insights.case3_desc">
                             Architected a highly resilient microservices infrastructure capable of scaling
                             to support
                             millions of concurrent users during peak gaming events.
                         </p>
                         <div class="insight-footer">
                             <span style="color: var(--accent-brand); font-weight: 600;"><i
-                                    class="ph-duotone ph-game-controller"></i> Scalability</span>
+                                    class="ph-duotone ph-game-controller"></i> <span
+                                    data-i18n="insights.case3_footer">Scalability</span></span>
                         </div>
                     </div>
                 </article>
@@ -377,17 +406,19 @@
                 <!-- Case Study 4: Marketing -->
                 <article class="insight-card" style="background: var(--bg-primary);">
                     <div class="insight-content">
-                        <div class="insight-tag">Strategy</div>
-                        <h3 class="insight-title" style="font-size: 1.25rem;">Marketing Success Strategy
+                        <div class="insight-tag" data-i18n="insights.case4_tag">Strategy</div>
+                        <h3 class="insight-title" style="font-size: 1.25rem;" data-i18n="insights.case4_title">Marketing
+                            Success Strategy
                         </h3>
-                        <p class="insight-excerpt">
+                        <p class="insight-excerpt" data-i18n="insights.case4_desc">
                             Executed a data-driven digital marketing strategy utilizing AI analytics to
                             optimize ad
                             spend, resulting in a 300% ROI increase for a retail client.
                         </p>
                         <div class="insight-footer">
                             <span style="color: var(--accent-brand); font-weight: 600;"><i
-                                    class="ph-duotone ph-chart-line-up"></i> Growth</span>
+                                    class="ph-duotone ph-chart-line-up"></i> <span
+                                    data-i18n="insights.case4_footer">Growth</span></span>
                         </div>
                     </div>
                 </article>
@@ -409,7 +440,8 @@
                         </svg>
                         <div class="logo" style="font-size: 1.2rem;">JMAD<span>.</span></div>
                     </a>
-                    <p style="color: var(--text-muted); margin-top: 0.5rem;">&copy; 2025 JMAD Solutions.
+                    <p style="color: var(--text-muted); margin-top: 0.5rem;" data-i18n="footer.copyright">&copy; 2025
+                        JMAD Solutions.
                         All rights
                         reserved.</p>
                 </div>
@@ -423,6 +455,7 @@
         </div>
     </footer>
 
+    <script src="assets/js/i18n.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
