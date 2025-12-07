@@ -456,12 +456,55 @@ class I18n {
     }
 
     bindEvents() {
-        const switcher = document.getElementById('language-switcher');
-        if (switcher) {
-            switcher.value = this.currentLang;
-            switcher.addEventListener('change', (e) => {
-                this.setLanguage(e.target.value);
+        // Handle custom dropdown toggle
+        const dropdownBtn = document.querySelector('.lang-drop-btn');
+        const dropdown = document.querySelector('.lang-dropdown');
+        const dropdownMenu = document.querySelector('.lang-drop-menu');
+        const langLabel = document.getElementById('current-lang-label');
+
+        if (dropdownBtn && dropdown) {
+            // Toggle dropdown on button click
+            dropdownBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
             });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!dropdown.contains(e.target)) {
+                    dropdown.classList.remove('active');
+                }
+            });
+        }
+
+        // Handle language selection
+        if (dropdownMenu) {
+            const langLinks = dropdownMenu.querySelectorAll('a[data-lang]');
+            langLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = e.currentTarget.getAttribute('data-lang');
+                    this.setLanguage(lang);
+                    dropdown.classList.remove('active');
+                });
+
+                // Mark active language
+                if (link.getAttribute('data-lang') === this.currentLang) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Update label with current language
+        if (langLabel) {
+            const langMap = {
+                'en': 'EN',
+                'zh': '中文',
+                'vi': 'VI',
+                'ko': '한국어',
+                'th': 'ไทย'
+            };
+            langLabel.textContent = langMap[this.currentLang] || 'EN';
         }
     }
 
@@ -477,11 +520,28 @@ class I18n {
         // Update HTML lang attribute
         document.documentElement.lang = lang;
 
-        // Update switcher value if it exists
-        const switcher = document.getElementById('language-switcher');
-        if (switcher) {
-            switcher.value = lang;
+        // Update dropdown label
+        const langLabel = document.getElementById('current-lang-label');
+        if (langLabel) {
+            const langMap = {
+                'en': 'EN',
+                'zh': '中文',
+                'vi': 'VI',
+                'ko': '한국어',
+                'th': 'ไทย'
+            };
+            langLabel.textContent = langMap[lang] || 'EN';
         }
+
+        // Update active state in dropdown menu
+        const langLinks = document.querySelectorAll('.lang-drop-menu a[data-lang]');
+        langLinks.forEach(link => {
+            if (link.getAttribute('data-lang') === lang) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
 
         this.render();
     }
