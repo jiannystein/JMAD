@@ -668,3 +668,84 @@ footer {
   border-top: 1px solid var(--border-light);
   padding-top: 1rem;
 }
+/* --- Mobile Polish & Responsive Overrides --- */
+@media (max-width: 768px) {
+
+  /* Global Spacing */
+  :root {
+    --spacing-xl: 4rem;
+    --spacing-lg: 2.5rem;
+  }
+
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  /* Typography */
+  .hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Grid Adjustments - Safer for small screens */
+  .grid-2,
+  .grid-3,
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Partner Cards - Persistent Highlight */
+  .partner-card::before {
+    opacity: 1;
+    /* Always show the colored border */
+    width: 6px;
+    /* Slightly thicker for visibility */
+  }
+
+  .partner-card {
+    background: rgba(255, 255, 255, 0.04);
+    /* Improve contrast */
+  }
+
+  /* Service Cards - Mobile Polish */
+  .card {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Add subtle highlight to cards to replace hover effect */
+  .card:nth-child(1) {
+    border-top: 2px solid var(--accent-highlight);
+  }
+
+  .card:nth-child(2) {
+    border-top: 2px solid var(--accent-info);
+  }
+
+  .card:nth-child(3) {
+    border-top: 2px solid var(--accent-brand);
+  }
+
+  .card:nth-child(4) {
+    border-top: 2px solid var(--accent-orange);
+  }
+
+  /* MSP Cards */
+  .msp-card {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Insights */
+  .insight-title {
+    font-size: 1.25rem;
+  }
+
+  /* Ensure container padding is sufficient */
+  .container {
+    padding: 0 1.5rem;
+  }
+}
